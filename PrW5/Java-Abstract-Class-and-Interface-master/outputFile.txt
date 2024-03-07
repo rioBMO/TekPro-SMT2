@@ -1,0 +1,41 @@
+******************************************************
+Number of employees working as MANAGER are: 1
+******************************************************
+1. Manager Details:
+Store Details: XYZ Electronics
+Employee Name: Michael Johnson
+Base Pay: $100.0
+Number of Hours worked: 12.5hrs
+Payment Rate per hour: $20.0/hr
+Total Sales in store: $120000.0
+Sales done: $5000.0
+Percentage of sales done: 4.17%
+Gross Payment: $353.5
+Remaining store revenue: $101818.035
+Tax Store: 16800.0
+Work Hour per Day: 6.0
+Overtime Pay: 260.0
+******************************************************
+Number of employees working as SALES ASSOCIATES are: 1
+******************************************************
+Store Details: XYZ Electronics
+Employee Name: Emily Brown
+Base Pay: $80.0
+Number of Hours worked: 9.0hrs
+Payment Rate per hour: $10.0/hr
+Sales Rate: 10000.0%
+Total commission: $8.0
+Gross Payment: $178.0
+Work Hour per Day: 8.0
+Overtime Pay: 15.0
+******************************************************
+Number of employees working as INTERN are: 1
+******************************************************
+Store Details: XYZ Electronics
+Employee Name: Internship
+Base Pay: $20.0
+Number of Hours worked: 8.0hrs
+Payment Rate per hour: $0.0/hr
+Academic Institution: XYZ Business School
+Gross Payment: $20.0
+Work Hour per Day: 8.0
