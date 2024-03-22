@@ -1,20 +1,34 @@
+// ******************************************************* 
+// Salesperson.java 
+// 
+// Represents a sales person who has a first name, last 
+// name, and total number of sales. 
+// ******************************************************* 
 public class Salesperson implements Comparable<Salesperson> {
     private String firstName, lastName;
     private int totalSales;
 
-    // Constructor
+    //------------------------------------------------------ 
+    // Constructor: Sets up the sales person object with 
+    // the given data. 
+    //------------------------------------------------------ 
     public Salesperson(String first, String last, int sales) {
         firstName = first;
         lastName = last;
         totalSales = sales;
     }
 
-    // Returns the sales person as a string
+    //------------------------------------------- 
+    // Returns the sales person as a string. 
+    //-------------------------------------------
     public String toString() {
         return lastName + ", " + firstName + ": \t" + totalSales;
     }
 
-    // Checks if the sales people have the same name
+    //------------------------------------------- 
+    // Returns true if the sales people have 
+    // the same name. 
+    //-------------------------------------------
     public boolean equals(Object other) {
         if (!(other instanceof Salesperson)) {
             return false;
@@ -23,36 +37,45 @@ public class Salesperson implements Comparable<Salesperson> {
         return lastName.equals(otherSalesperson.lastName) && firstName.equals(otherSalesperson.firstName);
     }
 
-    // Compares two salespersons based on total sales and name
+    //-------------------------------------------------- 
+    // Order is based on total sales with the name 
+    // (last, then first) breaking a tie. 
+    //--------------------------------------------------    
     @Override
     public int compareTo(Salesperson other) {
+        int result = 0;
         // Compare based on total sales
-        int salesComparison = Integer.compare(this.totalSales, other.totalSales);
-        if (salesComparison != 0) {
-            return salesComparison; // If sales are different, return the comparison result
+        if (this.totalSales < other.totalSales) {
+            result = -1;
+        } else if (this.totalSales > other.totalSales) {
+            result = 1;
         } else {
-            // If sales are equal, compare based on last name
-            int lastNameComparison = this.lastName.compareTo(other.lastName);
-            if (lastNameComparison != 0) {
-                return lastNameComparison; // If last names are different, return the comparison result
-            } else {
-                // If last names are equal, compare based on first name
-                return this.firstName.compareTo(other.firstName);
+            result = this.lastName.compareTo(other.lastName);
+            if (result == 0) {
+                result = this.firstName.compareTo(other.firstName);
             }
         }
+        return result;
     }
 
-    // First name accessor
+    //------------------------- 
+    // First name accessor. 
+    //-------------------------
     public String getFirstName() {
         return firstName;
     }
 
-    // Last name accessor
+ 
+    //------------------------- 
+    // Last name accessor. 
+    //------------------------- 
     public String getLastName() {
         return lastName;
     }
 
-    // Total sales accessor
+    //------------------------- 
+    // Total sales accessor. 
+    //-------------------------
     public int getSales() {
         return totalSales;
     }
